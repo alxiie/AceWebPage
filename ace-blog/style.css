@@ -1,35 +1,820 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 40px;
-}
-
-main {
-    max-width: 800px;
-    margin: 30px auto;
     padding: 20px;
+
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #705849;
+
+    font-family: "Lora", Georgia, serif;
 }
 
-article {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
+
+/* =========================================
+   WEBSITE CONTAINER
+========================================= */
+
+.website {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background-color: #fffdfb;
+
+    border: 6px solid #f4e9e5;
+
+    box-shadow:
+        0 0 0 2px #d6c5bc,
+        0 8px 30px rgba(80, 60, 50, 0.15);
+
 }
 
-.date {
-    color: gray;
+
+/* =========================================
+   TOP MESSAGE
+========================================= */
+
+.top-message {
+
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 7px 15px;
+
+    border-bottom: 2px solid #e9d4ce;
+
+    background-color: #fffaf8;
+
+    font-family: "Patrick Hand", cursive;
+
+    color: #715747;
+}
+
+
+.top-icon {
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background-color: #f1d4d9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+}
+
+
+.top-small {
+    font-size: 16px;
+}
+
+
+.top-text {
+
+    flex: 1;
+
+    text-align: center;
+
+    font-family: "Lora", serif;
+
     font-size: 14px;
 }
 
-footer {
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    height: 260px;
+
+    padding: 10px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #f9e9eb,
+            #f9e9eb 12px,
+            #f6e2e5 12px,
+            #f6e2e5 24px
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.hero-background {
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            rgba(255, 235, 240, 0.35),
+            rgba(255, 235, 240, 0.35)
+        );
+
+    position: relative;
+}
+
+
+.hero-quote {
+
+    position: absolute;
+
+    top: 35px;
+    left: 28%;
+
     text-align: center;
-    padding: 20px;
-    color: gray;
+
+    font-family: "Lora", serif;
+
+    font-style: italic;
+
+    color: #765f58;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+.deer {
+
+    position: absolute;
+
+    right: 7%;
+
+    bottom: 10px;
+
+    font-size: 95px;
+
+    filter: drop-shadow(3px 4px 2px rgba(0,0,0,0.15));
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.content {
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    padding: 0 12px 20px;
+}
+
+
+/* =========================================
+   LEFT COLUMN
+========================================= */
+
+.left-column {
+
+    padding: 0 15px 10px 5px;
+
+    border-right: 2px dotted #e7c9c7;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile {
+
+    margin-top: -85px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.profile-picture {
+
+    width: 190px;
+    height: 190px;
+
+    margin-left: 5px;
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+    background-color: #a97b62;
+
+    border: 5px solid #7b5c4d;
+
+    box-shadow:
+        0 0 0 8px #f3d5d8,
+        5px 8px 12px rgba(0,0,0,0.2);
+
+    overflow: hidden;
+}
+
+
+.profile-picture img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+.profile-picture img[src="images/profile.jpg"] {
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d5147,
+            #c29b91
+        );
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.social-links {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.social-button {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 8px 50px 8px 35px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    background-color: #654d3c;
+
+    color: white;
+
+    font-family: "Lora", serif;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.social-button:hover {
+
+    transform: translateX(5px);
+
+    background-color: #80634f;
+}
+
+
+.social-icon {
+
+    position: absolute;
+
+    left: 18px;
+
+    font-weight: bold;
+}
+
+
+.heart {
+
+    position: absolute;
+
+    right: 5px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #efc6d0;
+
+    color: white;
+
+    font-size: 23px;
+}
+
+
+/* =========================================
+   DECORATIVE LINE
+========================================= */
+
+.decorative-line {
+
+    margin: 15px 0;
+
+    padding: 8px 0;
+
+    border-top: 2px dotted #e5c8c7;
+    border-bottom: 2px dotted #e5c8c7;
+
+    text-align: center;
+
+    color: #a67b6c;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.info-section h2 {
+
+    margin-bottom: 5px;
+
+    font-family: "Bree Serif", serif;
+
+    color: #76584c;
+
+    font-size: 22px;
+}
+
+
+.info-section p {
+
+    margin-top: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.bows {
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 21px;
+}
+
+
+/* =========================================
+   RIGHT COLUMN
+========================================= */
+
+.right-column {
+
+    padding: 0 5px 10px 20px;
+
+    position: relative;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    margin-top: 0;
+}
+
+
+.intro h1 {
+
+    margin: 0;
+
+    font-family: "Bree Serif", serif;
+
+    font-size: 45px;
+
+    color: #805b4b;
+}
+
+
+.details {
+
+    margin: 0;
+
+    color: #80685d;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+
+    margin-top: 20px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px dotted #dfc2bf;
+}
+
+
+.about-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.about-icon {
+
+    font-size: 34px;
+}
+
+
+.about h2 {
+
+    margin: 0;
+
+    font-family: "Bree Serif", serif;
+
+    font-size: 24px;
+
+    color: #805b4b;
+}
+
+
+.about p {
+
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   SMALL CHARACTER
+========================================= */
+
+.small-character {
+
+    text-align: right;
+
+    font-size: 40px;
+
+    margin-top: -20px;
+}
+
+
+/* =========================================
+   MESSAGE BOX
+========================================= */
+
+.message-box {
+
+    margin-top: 5px;
+
+    border: 1px solid #80695e;
+
+    background-color: white;
+}
+
+
+.message-toolbar {
+
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #80695e;
+}
+
+
+.message-toolbar button {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    color: #745849;
+}
+
+
+.slider-container {
+
+    width: 100px;
+}
+
+
+#sizeSlider {
+
+    width: 100%;
+}
+
+
+.message-box textarea {
+
+    width: 100%;
+
+    height: 150px;
+
+    padding: 12px;
+
+    resize: none;
+
+    border: none;
+
+    outline: none;
+
+    font-family: "Lora", serif;
+
+    color: #634f45;
+}
+
+
+.send-button {
+
+    width: 100%;
+
+    height: 35px;
+
+    background-color: white;
+
+    border: none;
+
+    border-top: 1px solid #80695e;
+
+    cursor: pointer;
+
+    color: #6e5a50;
+
+    font-family: "Lora", serif;
+}
+
+
+.send-button:hover {
+
+    background-color: #f7e9e8;
+}
+
+
+/* =========================================
+   SPOTIFY
+========================================= */
+
+.spotify-section {
+
+    margin-top: 10px;
+}
+
+
+.spotify-section h2 {
+
+    margin: 5px 0;
+
+    font-family: "Bree Serif", serif;
+
+    font-size: 18px;
+
+    color: #76584c;
+}
+
+
+.spotify-player {
+
+    min-height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7b6ca,
+            #f8dce8
+        );
+
+    box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,0.5);
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+
+.spotify-player:hover {
+
+    transform: scale(1.02);
+}
+
+
+.album-art {
+
+    width: 95px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #f4d9df,
+            #f4d9df 5px,
+            #eac8d0 5px,
+            #eac8d0 10px
+        );
+
+    border: 2px solid white;
+
+    font-size: 35px;
+}
+
+
+.music-controls {
+
+    flex: 1;
+
+    text-align: center;
+}
+
+
+.music-title {
+
+    font-family: "Patrick Hand", cursive;
+
+    margin-bottom: 10px;
+}
+
+
+.controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.controls button {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #76584c;
+
+    font-size: 18px;
+}
+
+
+.controls .play-button {
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background-color: #f5dce5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 5px;
+    }
+
+
+    .content {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .left-column {
+
+        border-right: none;
+
+        border-bottom: 2px dotted #e7c9c7;
+
+        padding-bottom: 20px;
+    }
+
+
+    .right-column {
+
+        padding-left: 5px;
+
+        padding-top: 20px;
+    }
+
+
+    .profile-picture {
+
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .hero {
+
+        height: 220px;
+    }
+
+
+    .top-text {
+
+        font-size: 11px;
+    }
+
+
+    .top-small {
+
+        display: none;
+    }
+
 }

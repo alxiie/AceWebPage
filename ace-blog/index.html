@@ -1,38 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Blog</title>
+    <title>Siya's Blog</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lora:wght@400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>My Blog</h1>
-        <p>Welcome to my little corner of the internet.</p>
-    </header>
+    <!-- Main Website -->
+    <div class="website">
 
-    <main>
-        <article>
-            <h2>My First Blog Post</h2>
-            <p class="date">August 11, 2026</p>
+        <!-- ================= TOP MESSAGE ================= -->
 
-            <p>
-                Hello! This is my first blog post.
-                I'm learning how to build websites using HTML,
-                CSS, and JavaScript.
-            </p>
-        </article>
-    </main>
+        <header class="top-message">
 
-    <footer>
-        <p>&copy; 2026 My Blog</p>
-    </footer>
+            <div class="top-icon">
+                🌸
+            </div>
 
+            <div class="top-small">
+                >-5!!!
+            </div>
+
+            <div class="top-text">
+                I am NOT a girlfailure... I'm a grown woman with a 2-5!!
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-background">
+
+                <div class="hero-quote">
+                    But we cannot sit and share at<br>
+                    our wounds forever
+                </div>
+
+                <div class="deer">
+                    🦌
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="content">
+
+            <!-- ================= LEFT COLUMN ================= -->
+
+            <aside class="left-column">
+
+                <!-- Profile -->
+
+                <div class="profile">
+
+                    <div class="profile-picture">
+                        <img src="images/profile.jpg" alt="Profile picture">
+                    </div>
+
+                </div>
+
+
+                <!-- Social Links -->
+
+                <div class="social-links">
+
+                    <a href="https://www.pinterest.com/"
+                       target="_blank"
+                       class="social-button">
+
+                        <span class="social-icon">P</span>
+                        <span>Pinterest</span>
+
+                        <span class="heart">♡</span>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="social-button"
+                       onclick="showMessage('Discord link coming soon!')">
+
+                        <span class="social-icon">◉</span>
+                        <span>ásiyaa</span>
+
+                        <span class="heart">♡</span>
+
+                    </a>
+
+
+                    <a href="https://www.youtube.com/"
+                       target="_blank"
+                       class="social-button">
+
+                        <span class="social-icon">▶</span>
+                        <span>YouTube</span>
+
+                        <span class="heart">♡</span>
+
+                    </a>
+
+
+                    <a href="https://www.tiktok.com/"
+                       target="_blank"
+                       class="social-button">
+
+                        <span class="social-icon">♪</span>
+                        <span>TikTok</span>
+
+                        <span class="heart">♡</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- Divider -->
+
+                <div class="decorative-line">
+                    ✿　✿　✿　✿
+                </div>
+
+
+                <!-- Useless Info -->
+
+                <section class="info-section">
+
+                    <h2>Useless Info:</h2>
+
+                    <p>
+                        When I'm not crashing out at w*rk,
+                        I'm getting tilted in a video game,
+                        hobby shopping, watching anime,
+                        or listening to music.
+                        If I'm slow to reply, that's likely
+                        the reason... (｡•́︿•̀｡)
+                    </p>
+
+                </section>
+
+
+                <div class="bows">
+                    🎀　🎀　🎀　🎀
+                </div>
+
+            </aside>
+
+
+            <!-- ================= RIGHT COLUMN ================= -->
+
+            <section class="right-column">
+
+                <!-- Profile Name -->
+
+                <section class="intro">
+
+                    <h1>Siya!</h1>
+
+                    <p class="details">
+                        20 | she/her | Free Palestine!
+                    </p>
+
+                </section>
+
+
+                <!-- About Me -->
+
+                <section class="about">
+
+                    <div class="about-title">
+
+                        <span class="about-icon">
+                            🐒
+                        </span>
+
+                        <h2>Abt me!</h2>
+
+                    </div>
+
+
+                    <p>
+                        Basically an overworked Japanese salaryman,
+                        just not Japanese and not a man.
+                        I'd rather be watching yuri and grinding
+                        Overwatch instead of contributing to the
+                        economy... hmph! (╬ಠ益ಠ)
+                    </p>
+
+                </section>
+
+
+                <!-- Decorative character -->
+
+                <div class="small-character">
+                    🧘
+                </div>
+
+
+                <!-- Anonymous Message -->
+
+                <section class="message-box">
+
+                    <div class="message-toolbar">
+
+                        <button onclick="undoMessage()">
+                            ↶
+                        </button>
+
+                        <div class="slider-container">
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="50"
+                                id="sizeSlider"
+                            >
+                        </div>
+
+                        <button onclick="changeColor()">
+                            🌈
+                        </button>
+
+                    </div>
+
+
+                    <textarea
+                        id="anonymousMessage"
+                        placeholder="Write something anonymously..."
+                    ></textarea>
+
+
+                    <button
+                        class="send-button"
+                        onclick="sendAnonymousMessage()"
+                    >
+                        Send anonymously 🌸 🥺
+                    </button>
+
+                </section>
+
+
+                <!-- Spotify -->
+
+                <section class="spotify-section">
+
+                    <h2>
+                        ↓ Click for my Spotify!
+                    </h2>
+
+
+                    <div
+                        class="spotify-player"
+                        onclick="toggleMusic()"
+                    >
+
+                        <div class="album-art">
+                            🎀
+                        </div>
+
+
+                        <div class="music-controls">
+
+                            <div class="music-title">
+                                My favorite playlist
+                            </div>
+
+                            <div class="controls">
+
+                                <button onclick="previousSong(event)">
+                                    |◀
+                                </button>
+
+                                <button
+                                    class="play-button"
+                                    id="playButton"
+                                >
+                                    ▶
+                                </button>
+
+                                <button onclick="nextSong(event)">
+                                    ▶|
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
+
 </html>
