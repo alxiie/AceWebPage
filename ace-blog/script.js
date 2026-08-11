@@ -133,3 +133,15 @@ function showMessage(message) {
     alert(message);
 
 }
+
+/*==========================================
+   DISCORD LINK MESSAGE
+========================================= */
+
+function copyDiscord(event) {
+    event.preventDefault();
+
+    navigator.clipboard.writeText("Alxcii_e");
+
+    alert("Discord username copied! ♡");
+}

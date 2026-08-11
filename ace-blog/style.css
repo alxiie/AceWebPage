@@ -166,16 +166,20 @@ body {
 
 
 .deer {
-
     position: absolute;
-
     right: 7%;
-
     bottom: 10px;
 
-    font-size: 95px;
+    width: 180px;
+    height: 180px;
+}
 
-    filter: drop-shadow(3px 4px 2px rgba(0,0,0,0.15));
+.deer img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: contain;
+    display: block;
 }
 
 
@@ -624,9 +628,9 @@ body {
    SPOTIFY
 ========================================= */
 
-.spotify-section {
-
-    margin-top: 10px;
+.spotify-player {
+    text-decoration: none;
+    color: inherit;
 }
 
 
