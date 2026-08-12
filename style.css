@@ -1060,15 +1060,90 @@ body {
 }
 
 /* =========================================
-   GIF
+GIF + RIBBONS
 ========================================= */
+
+.gif-container {
+    position: relative;
+
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 150px;
+}
+
 .gif-container img {
     width: 100%;
     max-width: 300px;
     height: auto;
+
     border-radius: 12px;
+
     display: block;
-    margin: 0 auto;
+}
+
+/* Ribbon containers */
+
+.gif-ribbons {
+    position: absolute;
+
+    top: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+}
+
+/* Left side */
+
+.left-ribbons {
+    left: 5%;
+}
+
+/* Right side */
+
+.right-ribbons {
+    right: 5%;
+}
+
+/* Individual ribbons */
+
+.gif-ribbons span {
+    font-size: 28px;
+
+    display: block;
+
+    animation: ribbonFloat 2s ease-in-out infinite;
+}
+
+/* Make each ribbon move slightly differently */
+
+.gif-ribbons span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.gif-ribbons span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes ribbonFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
 }
 
 /* =========================================
