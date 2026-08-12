@@ -83,46 +83,54 @@ slider.addEventListener("input", function () {
 
 
 /* =========================================
-   MUSIC PLAYER
+MUSIC PLAYER
 ========================================= */
 
-let playing = false;
+/* =========================================
+BGM PLAYER
+========================================= */
 
+const bgm = document.getElementById("bgm");
+const bgmButton = document.getElementById("bgmButton");
 
-function toggleMusic() {
+// Set BGM volume
+bgm.volume = 0.10;
 
-    playing = !playing;
+function toggleBGM(event) {
 
-    const button =
-        document.getElementById("playButton");
+    event.preventDefault();
+    event.stopPropagation();
 
-    if (playing) {
+    if (bgm.paused) {
 
-        button.textContent = "❚❚";
+        bgm.play()
+            .then(() => {
+                bgmButton.textContent = "❚❚";
+            })
+            .catch((error) => {
+                console.error("BGM could not play:", error);
+            });
 
     } else {
 
-        button.textContent = "▶";
+        bgm.pause();
+        bgmButton.textContent = "▶";
 
     }
 }
 
+// Try to autoplay the BGM
+window.addEventListener("load", () => {
 
-function previousSong(event) {
+    bgm.play()
+        .then(() => {
+            bgmButton.textContent = "❚❚";
+        })
+        .catch(() => {
+            console.log("Autoplay was blocked. Click the BGM button to start.");
+        });
 
-    event.stopPropagation();
-
-    alert("Previous song 🎵");
-}
-
-
-function nextSong(event) {
-
-    event.stopPropagation();
-
-    alert("Next song 🎵");
-}
-
+});
 
 /* =========================================
    SMALL MESSAGE
