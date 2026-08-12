@@ -822,3 +822,100 @@ body {
     }
 
 }
+
+/* =========================================
+   PORTFOLIO
+========================================= */
+
+.portfolio {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* =========================================
+   PORTFOLIO HEADER
+========================================= */
+
+.portfolio-header {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto 15px;
+}
+
+.portfolio-header h1 {
+    font-family: 'Bree Serif', serif;
+    font-size: 48px;
+    margin: 0;
+}
+
+.portfolio-header p {
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   BACK TO BLOG
+========================================= */
+
+.back-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.back-link a {
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    text-decoration: none;
+
+    color: #6b4f3f;
+
+    background: #f5d6df;
+
+    border: 2px solid #8b6b5a;
+
+    border-radius: 20px;
+
+    font-family: 'Bree Serif', serif;
+
+    transition: transform 0.2s ease;
+}
+
+.back-link a:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   DRAWING GALLERY
+========================================= */
+
+.drawing-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    max-width: 700px;
+
+    margin: 20px auto;
+}
+
+.drawing-gallery img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    display: block;
+}
