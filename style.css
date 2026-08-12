@@ -224,11 +224,12 @@ body {
 
 
 .profile-picture {
-
     width: 190px;
     height: 190px;
 
     margin-left: 5px;
+
+    position: relative;
 
     border-radius: 50%;
 
@@ -240,9 +241,11 @@ body {
 
     box-shadow:
         0 0 0 8px #f3d5d8,
-        5px 8px 12px rgba(0,0,0,0.2);
+        5px 8px 12px rgba(0, 0, 0, 0.2);
 
-    overflow: hidden;
+    overflow: visible;
+
+    z-index: 1;
 }
 
 
@@ -256,6 +259,40 @@ body {
     border-radius: 50%;
 }
 
+.profile-picture::before {
+    content: "";
+
+    position: absolute;
+
+    top: -30px;
+    left: -30px;
+
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
+
+    background-image: url("images/profile-border.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+
+    z-index: 3;
+
+    mix-blend-mode: multiply;
+
+    animation: rotateProfileBorder 12s linear infinite;
+}
+
+@keyframes rotateProfileBorder {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .profile-picture img[src="images/profile.jpg"] {
 
@@ -918,4 +955,118 @@ body {
     object-fit: contain;
 
     display: block;
+}
+
+/* =========================================
+   LUCIO
+========================================= */
+
+.lucio {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* =========================================
+   LUCIO HEADER
+========================================= */
+
+.lucio-header {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto 15px;
+}
+
+.lucio-header h1 {
+    font-family: 'Bree Serif', serif;
+    font-size: 48px;
+    margin: 0;
+}
+
+.lucio-header p {
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   BACK TO BLOG
+========================================= */
+
+.back-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.back-link a {
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    text-decoration: none;
+
+    color: #6b4f3f;
+
+    background: #f5d6df;
+
+    border: 2px solid #8b6b5a;
+
+    border-radius: 20px;
+
+    font-family: 'Bree Serif', serif;
+
+    transition: transform 0.2s ease;
+}
+
+.back-link a:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   LUCIO GALLERY
+========================================= */
+
+.lucio-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    max-width: 700px;
+
+    margin: 20px auto;
+}
+
+.lucio-gallery img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.gif-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* =========================================
+   GIF
+========================================= */
+.gif-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
 }
